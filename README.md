@@ -1,3 +1,7 @@
+
+![image](https://github.com/a2rp/fetch-github-profile/assets/5670738/97434e52-10fa-4183-97fb-2a70dd08d96d)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
