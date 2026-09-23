@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://a2rp.github.io/fetch-github-profile",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -12,6 +13,7 @@
     "axios": "^1.6.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.7.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
     "sass": "^1.76.0",

@@ -1,6 +1,6 @@
 import React from "react";
 import GithubProfileFinder from "./githubProfileFinder";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
 
             <ToastContainer />
         </div>
-    )
-}
+    );
+};
 
-export default App
+export default App;
 
