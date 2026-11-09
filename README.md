@@ -9,6 +9,7 @@ A responsive React app that searches public GitHub usernames and presents profil
 - GitHub username search using the public GitHub API
 - Profile avatar, bio, location, blog, dates, and account statistics
 - Loading and not-found feedback with toast messages
+- Reduced-motion support and accessible loading feedback
 - Responsive fixed header, icon-only footer, and go-to-top control
 - GitHub Pages deployment setup
 

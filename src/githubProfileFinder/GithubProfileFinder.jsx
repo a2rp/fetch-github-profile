@@ -4,9 +4,11 @@ import {
     FiArrowUp,
     FiCode,
     FiCoffee,
+    FiFacebook,
     FiGithub,
     FiGlobe,
     FiHeart,
+    FiLinkedin,
     FiMail,
     FiSearch,
     FiStar,
@@ -84,10 +86,29 @@ const GithubProfileFinder = () => {
                             placeholder="e.g. a2rp"
                             fullWidth
                             size="small"
+                            disabled={isLoading}
                             inputProps={{ "aria-label": "GitHub username" }}
                         />
-                        <Button type="submit" variant="contained" disabled={isLoading} className={styles.submitButton}>
-                            {isLoading ? <CircularProgress size={22} color="inherit" /> : <><FiSearch /> Search</>}
+                        <Button
+                            type="submit"
+                            variant="contained"
+                            disabled={isLoading}
+                            className={styles.submitButton}
+                        >
+                            {isLoading ? (
+                                <>
+                                    <CircularProgress
+                                        size={18}
+                                        color="inherit"
+                                        aria-label="Searching"
+                                    />
+                                    Searching
+                                </>
+                            ) : (
+                                <>
+                                    <FiSearch /> Search
+                                </>
+                            )}
                         </Button>
                     </form>
                 </section>
@@ -130,8 +151,8 @@ const GithubProfileFinder = () => {
                     <a href="https://www.ashishranjan.net/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" title="Portfolio"><FiGlobe /></a>
                     <a href="https://github.com/a2rp" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><FiGithub /></a>
                     <a href="https://codepen.io/ash1198" target="_blank" rel="noopener noreferrer" aria-label="CodePen" title="CodePen"><FiCode /></a>
-                    <a href="https://www.linkedin.com/in/aashishranjan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><FiUsers /></a>
-                    <a href="https://www.facebook.com/theash.ashish/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><FiUsers /></a>
+                    <a href="https://www.linkedin.com/in/aashishranjan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><FiLinkedin /></a>
+                    <a href="https://www.facebook.com/theash.ashish/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><FiFacebook /></a>
                     <a href="https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><FiYoutube /></a>
                     <a href="mailto:ash.ranjan09@gmail.com" aria-label="Email" title="Email"><FiMail /></a>
                     <a href="https://a2rp-donation-page.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Support" title="Support"><FiHeart /></a>
@@ -140,7 +161,24 @@ const GithubProfileFinder = () => {
                 </nav>
             </footer>
 
-            {showGoToTop && <button type="button" className={styles.goToTop} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top" title="Scroll to top"><FiArrowUp /></button>}
+            {showGoToTop && (
+                <button
+                    type="button"
+                    className={styles.goToTop}
+                    onClick={() => {
+                        const behavior = window.matchMedia(
+                            "(prefers-reduced-motion: reduce)",
+                        ).matches
+                            ? "auto"
+                            : "smooth";
+                        window.scrollTo({ top: 0, behavior });
+                    }}
+                    aria-label="Scroll to top"
+                    title="Scroll to top"
+                >
+                    <FiArrowUp />
+                </button>
+            )}
         </div>
     );
 };
