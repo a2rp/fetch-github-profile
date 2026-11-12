@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Profile Finder",
+  "name": "GitHub Profile Finder",
+  "description": "Search public GitHub profiles and view key account details.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#081e36",
+  "background_color": "#f4f8fc"
 }
